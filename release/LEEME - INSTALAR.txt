@@ -1,0 +1,91 @@
+﻿DRESSMAKER - REAL FABRIC PREVIEW v2.2
+=====================================
+(Probado con Dressmaker 0.7.0 y BepInEx 5.4.23.6)
+
+Mod para Dressmaker: al soltar una tela sobre el boceto, la pieza muestra la tela
+como se ve de verdad en la prenda (color, estampado, brillo y lentejuelas).
+
+
+¿QUÉ CARPETA USO?
+-----------------
+Mira si en la carpeta del juego hay una carpeta llamada "BepInEx".
+Para encontrar la carpeta del juego: en Steam, clic derecho en Dressmaker
+-> Administrar -> Ver archivos locales.
+
+  * NO hay carpeta "BepInEx"  ->  usa  "1 - Full install (Instalacion completa)"
+  * SÍ hay carpeta "BepInEx"  ->  usa  "2 - Mod only (Solo el mod)"
+                                  (y lee "Si ya tenías BepInEx", más abajo)
+
+
+1 - INSTALACIÓN COMPLETA (no tenías mods)
+-----------------------------------------
+1. Cierra el juego.
+2. Copia TODO lo que hay dentro de la carpeta "1 - Full install (Instalacion completa)"
+   dentro de la carpeta del juego, al lado de Dressmaker.exe.
+   Si Windows pregunta si quieres reemplazar archivos, di que sí.
+3. Abre el juego. La primera vez tarda un poco más en arrancar.
+
+
+2 - SOLO EL MOD (ya tenías BepInEx)
+-----------------------------------
+1. Cierra el juego.
+2. Copia la carpeta "RealFabricPreview" (la que está dentro de
+   "2 - Mod only (Solo el mod)\BepInEx\plugins") a la carpeta  BepInEx\plugins  del juego.
+3. Abre el juego.
+
+
+SI YA TENÍAS BepInEx
+--------------------
+* Tiene que ser BepInEx 5, versión 5.4.23.6 o más nueva.
+  Con la 5.4.23.2 o anteriores, el juego SE CIERRA AL ARRANCAR (con esta
+  versión del juego, Unity 6.3). Si te pasa, haz la "Instalación completa":
+  actualiza BepInEx sin borrar tus otros mods.
+  Para ver tu versión: abre BepInEx\LogOutput.log y mira la primera línea.
+* BepInEx 6 (las versiones "pre" o "be") NO es compatible: este mod es para BepInEx 5.
+* Si usas el "Dressmaker Mod Loader", ya trae BepInEx: usa "2 - Mod only (Solo el mod)".
+* Si tienes el mod "Dressmaker Fabric Pattern Preview" (DressmakerFabricPattern.dll),
+  QUÍTALO de BepInEx\plugins. Hacen lo mismo y se pisarían.
+
+
+CÓMO SE USA
+-----------
+* Arrastra una tela del inventario y suéltala sobre una pieza del boceto.
+* Doble clic sobre una pieza: quita la tela.
+* Colorear una pieza con el lápiz: quita su tela.
+* La goma "borrar todo" del juego: quita todas las telas del vestido.
+* F9: alterna entre la tela real y el dibujo original del juego.
+* Las telas se recuerdan para cada vestido y cada partida.
+
+
+AJUSTES (opcional)
+------------------
+Después de abrir el juego una vez, se crea el archivo
+  BepInEx\config\dressmaker.realfabricpreview.cfg
+Se abre con el Bloc de notas:
+  WholePiece = true     -> la tela cubre la pieza entera (toda la falda)
+  PageMeters = 2        -> más bajo = estampados más grandes
+  LightIntensity = 1.2  -> más alto = telas más claras
+  RealShader = false    -> modo plano, sin brillo
+
+
+SI ALGO NO FUNCIONA
+-------------------
+Abre  BepInEx\LogOutput.log  con el Bloc de notas y busca "Real Fabric":
+* "Real Fabric Preview 2.2.0 loaded"   -> el mod está funcionando.
+* "Mod DESACTIVADO: esta versión de Dressmaker no es compatible"
+     -> el juego se actualizó y cambió algo que usa el mod. El mod se apaga solo
+        y el juego funciona normal, sin el mod. Hará falta una versión nueva del mod.
+* "Some features are off"   -> funciona, pero sin alguna función (por ejemplo
+     las costuras con color). Todo lo demás va bien.
+* "BepInEx antiguo"   -> actualiza BepInEx con la "Instalación completa".
+* "Mod desactivado tras errores repetidos"   -> algo raro pasó; abre un "Issue" en la
+     página de GitHub del mod y adjunta este archivo.
+El mod nunca debería cerrar el juego ni tocar las partidas.
+
+
+DESINSTALAR
+-----------
+Borra la carpeta  BepInEx\plugins\RealFabricPreview.
+Para quitar BepInEx del todo, borra también la carpeta BepInEx y los archivos
+winhttp.dll, doorstop_config.ini, .doorstop_version y changelog.txt.
+El mod no toca las partidas guardadas.

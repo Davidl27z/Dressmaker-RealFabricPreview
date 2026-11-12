@@ -1,0 +1,22 @@
+# build output
+build/
+dist/
+*.zip
+
+# never commit game or third-party binaries
+lib/
+*.dll
+*.pdb
+
+# personal / test data
+save_backup*/
+*.json
+assignments.txt
+RealFabricDebug/
+
+# editor junk
+.vs/
+.vscode/
+*.user
+Thumbs.db
+desktop.ini
